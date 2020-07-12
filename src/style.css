@@ -1,0 +1,51 @@
+body {
+  padding: 50px 30px;
+}
+
+.container {
+  font-family: "Ubuntu", sans-serif;
+  color: #ff3366;
+  border: 3px solid #ff3366;
+  padding: 20px;
+}
+
+h1 {
+  color: #5a6275;
+}
+h3 {
+  color: #5a6275;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.shade {
+  background-color: #ffeaef;
+}
+.col-2 {
+  text-align: center;
+  display: inline-block;
+}
+
+.form {
+  border: 3px solid #ff3366;
+}
+
+.button {
+  background-color: #dee0e3;
+  color: #ff3366;
+  border: 3px solid #5a6275;
+}
+
+#temp {
+  font-size: 40px;
+}
+#up {
+  vertical-align: top;
+}
+#city-button {
+  padding: 10px 20px;
+  font-weight: 600;
+}
