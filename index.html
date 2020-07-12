@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather 🌞</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <span class="shade">Monday</span>
+          <h1>Lisbon 🌞</h1>
+          <h3>Monday</h3>
+          <span id="degrees">
+            <span id="temp">22</span>
+            <span id="up">
+              <a href="#" id="celcius">°C</a> <span> | </span>
+              <a href="#" id="fahrenheit">°F</a>
+            </span>
+          </span>
+        </div>
+        <div class="col-6">
+          <form id="my-form">
+            <input
+              class="form"
+              id="form-input"
+              type="text"
+              placeholder="Enter a city"
+              autocomplete="off"
+              autofocus="on"
+            />
+            <input class="button" type="submit" value="Search" />
+          </form>
+          <br />
+          <br />
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div class="row">
+        <div class="col-2">
+          Tue
+          <div class="emoji">⛅</div>
+          <span class="shade">22°</span>
+          <span class="text"> | 15°</span>
+        </div>
+        <div class="col-2">
+          Wed
+          <div class="emoji">⛅</div>
+          <span class="shade">22°</span>
+          <span class="text"> | 15°</span>
+        </div>
+        <div class="col-2">
+          Thu
+          <div class="emoji">🌞</div>
+          <span class="shade">22°</span>
+          <span class="text"> | 15°</span>
+        </div>
+        <div class="col-2">
+          Fri
+          <div class="emoji">⛅</div>
+          <span class="shade">22°</span>
+          <span class="text"> | 15°</span>
+        </div>
+        <div class="col-2">
+          Sat
+          <div class="emoji">🌞</div>
+          <span class="shade">22°</span>
+          <span class="text"> | 15°</span>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
