@@ -5,24 +5,33 @@ body {
 h1 {
   color: #5a6275;
 }
+
 h3 {
   color: #5a6275;
   font-size: 20px;
 }
 
-a {
-  text-decoration: none;
-}
 small {
   display: block;
   text-align: right;
   color: #5a6275;
   margin: 0px auto;
 }
+
+a {
+  color: #5a6275;
+  text-decoration: underline #ff3366;
+}
+
+a:hover {
+  color: #ff3366;
+}
+
 .container {
   font-family: "Ubuntu", sans-serif;
   color: #ff3366;
 }
+
 .weather-app {
   max-width: 700px;
   margin: 0 auto;
@@ -31,9 +40,11 @@ small {
   border-radius: 10px;
   box-shadow: 4px 4px 4px 2px rgba(165, 155, 155, 0.2);
 }
+
 .shade {
   background-color: #ffeaef;
 }
+
 .col-2 {
   text-align: center;
   display: inline-block;
@@ -48,24 +59,20 @@ small {
   color: #ff3366;
   border: 2px solid #5a6275;
 }
+
 .weather-description {
   color: #5a6275;
   padding: 10px 0px 0px 0px;
 }
-a {
-  color: #5a6275;
-  text-decoration: underline #ff3366;
-}
 
-a:hover {
-  color: #ff3366;
-}
 #temp {
   font-size: 40px;
 }
+
 #up {
   vertical-align: top;
 }
+
 #city-button {
   padding: 10px 20px;
   font-weight: 600;
