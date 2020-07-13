@@ -4,6 +4,9 @@ body {
 
 h1 {
   color: #5a6275;
+  font-family: "Comfortaa", cursive;
+  font-size: 35px;
+  margin-top: 5px;
 }
 
 h3 {
@@ -20,7 +23,6 @@ small {
 
 a {
   color: #5a6275;
-  text-decoration: underline #ff3366;
 }
 
 a:hover {
@@ -47,11 +49,12 @@ a:hover {
 
 .col-2 {
   text-align: center;
-  display: inline-block;
+  display: block;
 }
 
 .form {
   border: 2px solid #ff3366;
+  max-width: 175px;
 }
 
 .button {
@@ -62,15 +65,20 @@ a:hover {
 
 .weather-description {
   color: #5a6275;
-  padding: 10px 0px 0px 0px;
+}
+
+.units {
+  text-decoration: underline #ff3366;
 }
 
 #temp {
-  font-size: 40px;
+  font-size: 38px;
+  font-family: "Comfortaa", cursive;
 }
 
 #up {
-  vertical-align: top;
+  position: relative;
+  top: -20px;
 }
 
 #city-button {
