@@ -2,13 +2,6 @@ body {
   padding: 50px 30px;
 }
 
-.container {
-  font-family: "Ubuntu", sans-serif;
-  color: #ff3366;
-  border: 3px solid #ff3366;
-  padding: 20px;
-}
-
 h1 {
   color: #5a6275;
 }
@@ -20,7 +13,24 @@ h3 {
 a {
   text-decoration: none;
 }
-
+small {
+  display: block;
+  text-align: right;
+  color: #5a6275;
+  margin: 0px auto;
+}
+.container {
+  font-family: "Ubuntu", sans-serif;
+  color: #ff3366;
+}
+.weather-app {
+  max-width: 700px;
+  margin: 0 auto;
+  border: 2px solid #ff3366;
+  padding: 20px 20px 7px 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 2px rgba(165, 155, 155, 0.2);
+}
 .shade {
   background-color: #ffeaef;
 }
@@ -30,15 +40,26 @@ a {
 }
 
 .form {
-  border: 3px solid #ff3366;
+  border: 2px solid #ff3366;
 }
 
 .button {
   background-color: #dee0e3;
   color: #ff3366;
-  border: 3px solid #5a6275;
+  border: 2px solid #5a6275;
+}
+.weather-description {
+  color: #5a6275;
+  padding: 10px 0px 0px 0px;
+}
+a {
+  color: #5a6275;
+  text-decoration: underline #ff3366;
 }
 
+a:hover {
+  color: #ff3366;
+}
 #temp {
   font-size: 40px;
 }
