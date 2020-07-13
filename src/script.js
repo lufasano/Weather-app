@@ -28,7 +28,11 @@ function showTemperature(response) {
   temperatureElement.innerHTML = `${temperature}`;
   let city = document.querySelector("#form-input").value;
   let h1 = document.querySelector("h1");
-  h1.innerHTML = `${city}`;
+  h1.innerHTML = response.data.name;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function searchCity(city) {
