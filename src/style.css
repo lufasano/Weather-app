@@ -92,3 +92,13 @@ a:hover {
   float: left;
   margin: 6px 0px 0px 0px;
 }
+
+.col-6 .active {
+  cursor: default;
+  font-weight: bold;
+}
+
+.col-6 .active:hover {
+  text-decoration: none;
+  color: #5a6275;
+}
