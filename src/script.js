@@ -15,12 +15,24 @@ let hour = now.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
 }
-
 let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 dateParagraph.innerHTML = `${day} ${hour}:${minutes}`;
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hour}:${minutes}`;
+}
 
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temp");
@@ -38,10 +50,34 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="col-2">
+    <div>
+      ${formatHours(forecast.dt * 1000)}
+      </div>
+      <img src="src/${
+        forecast.weather[0].icon
+      }.png" alt="forecast.weather[0].icon"/>
+      <span class="shade">${Math.round(forecast.main.temp_max)}°</span>
+      <span class="text"> | ${Math.round(forecast.main.temp_min)}°</span>
+    </div>`;
+  }
+}
+
 function searchCity(city) {
   let key = "60165e6fa483c2ba25ca27f92df423ed";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
   axios.get(url).then(showTemperature);
+
+  url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&units=metric`;
+  axios.get(url).then(displayForecast);
 }
 
 function search(event) {
