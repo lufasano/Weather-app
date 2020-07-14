@@ -35,7 +35,7 @@ a:hover {
 }
 
 .weather-app {
-  max-width: 700px;
+  max-width: 550px;
   margin: 0 auto;
   border: 2px solid #ff3366;
   padding: 20px 20px 7px 20px;
@@ -54,7 +54,7 @@ a:hover {
 
 .form {
   border: 2px solid #ff3366;
-  max-width: 175px;
+  max-width: 150px;
 }
 
 .button {
