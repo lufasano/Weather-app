@@ -62,9 +62,7 @@ function displayForecast(response) {
     <div>
       ${formatHours(forecast.dt * 1000)}
       </div>
-      <img src="src/${
-        forecast.weather[0].icon
-      }.png" alt="forecast.weather[0].icon"/>
+      <img src="src/${forecast.weather[0].icon}.png" alt="weather" id="icons"/>
       <span class="shade">${Math.round(forecast.main.temp_max)}°</span>
       <span class="text"> | ${Math.round(forecast.main.temp_min)}°</span>
     </div>`;
@@ -113,5 +111,19 @@ farenheitLink.addEventListener("click", displayFarenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+function showPosition(position) {
+  let key = "60165e6fa483c2ba25ca27f92df423ed";
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${key}&units=metric`;
+  axios.get(url).then(showTemperature);
+}
+
+function getCurrentPosition() {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let button = document.querySelector("#geo-button");
+button.addEventListener("click", getCurrentPosition);
 
 searchCity("Lisbon");
