@@ -25,14 +25,17 @@ dateParagraph.innerHTML = `${day} ${hour}:${minutes}`;
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temp");
   let temperature = Math.round(response.data.main.temp);
-  temperatureElement.innerHTML = `${temperature}`;
   let city = document.querySelector("#form-input").value;
   let h1 = document.querySelector("h1");
-  h1.innerHTML = response.data.name;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = Math.round(response.data.main.humidity);
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
+  temperatureElement.innerHTML = `${temperature}`;
+  h1.innerHTML = response.data.name;
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute("src", `src/${response.data.weather[0].icon}.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
