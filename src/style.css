@@ -74,6 +74,7 @@ a:hover {
 #temp {
   font-size: 38px;
   font-family: "Comfortaa", cursive;
+  padding-left: 10px;
 }
 
 #up {
@@ -84,4 +85,10 @@ a:hover {
 #city-button {
   padding: 10px 20px;
   font-weight: 600;
+}
+
+#icon {
+  max-width: 40px;
+  float: left;
+  margin: 6px 0px 0px 0px;
 }
